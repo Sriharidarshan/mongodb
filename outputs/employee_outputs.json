@@ -1,0 +1,12 @@
+[
+  {
+    "_id": 4,
+    "firstName": "Hemanth",
+    "salary": 7000
+  },
+  {
+    "_id": 6,
+    "firstName": "Amitabh",
+    "salary": 7000
+  }
+]

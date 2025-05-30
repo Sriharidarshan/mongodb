@@ -1,0 +1,17 @@
+db.students.insertMany([
+  { _id: 1, usn: "4AD24CD011", results_marks: [82, 85, 89] },
+  { _id: 2, usn: "4AD24CD041", results_marks: [75, 87, 99] },
+  { _id: 3, usn: "4AD24CD070", results_marks: [95, 88, 78] },
+  { _id: 4, usn: "4AD24CD088", results_marks: [82, 75, 96] }
+]);
+
+
+
+// Find documents with marks > 90
+db.students.find({ results_marks: { $elemMatch: { $gt: 90 } } });
+
+// Find documents where marks are 82 or 96
+db.students.find({ results_marks: { $in: [82, 96] } });
+
+// Find documents with marks >80 and <=82
+db.students.find({ results_marks: { $elemMatch: { $gt: 80, $lte: 82 } } });
