@@ -1,12 +1,121 @@
+// INSERTION 
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 1,
+    '1': 2,
+    '2': 3,
+    '3': 4,
+    '4': 5,
+    '5': 6
+  }
+}
+## VERIFYING
 [
+  {
+    "_id": 1,
+    "firstName": "Harshitha",
+    "lastName": "URS",
+    "email": "Harshitha@abc.com",
+    "salary": 10000,
+    "skills": [
+      "Angular",
+      "React",
+      "MongoDB"
+    ]
+  },
+  {
+    "_id": 2,
+    "firstName": "Sachin",
+    "lastName": "T",
+    "email": "sachin.t@abc.com",
+    "salary": 13000,
+    "skills": [
+      "Accounting",
+      "Tax"
+    ]
+  },
+  {
+    "_id": 3,
+    "firstName": "Ajay",
+    "lastName": "kumar",
+    "email": "Ajay@abc.com",
+    "salary": 12500,
+    "skills": [
+      "Sales",
+      "Marketing"
+    ],
+    "bonusEligible": true,
+    "performanceRating": "A"
+  },
   {
     "_id": 4,
     "firstName": "Hemanth",
-    "salary": 7000
+    "lastName": "Gowda",
+    "email": "steve.j@abc.com",
+    "salary": 13500,
+    "skills": [
+      "Mac",
+      "Marketing",
+      "Product Design"
+    ]
+  },
+  {
+    "_id": 5,
+    "firstName": "Kapil",
+    "lastName": "Sharma",
+    "email": "kapil.d@abc.com",
+    "salary": 9500,
+    "skills": [
+      "Accounting",
+      "Tax",
+      "Sales"
+    ],
+    "bonusEligible": true,
+    "performanceRating": "A"
   },
   {
     "_id": 6,
     "firstName": "Amitabh",
-    "salary": 7000
+    "lastName": "B",
+    "email": "amitabh.b@abc.com",
+    "salary": 13500,
+    "skills": [
+      "Marketing",
+      "Tax"
+    ],
+    "location": "Mumbai"
   }
 ]
+## to Update Whose Salary=7000 To Salary=8500 
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+##  to Update Location='Mumbai' Whose Firstname is Amitabh 
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+##  to Increment Salary By 5000 If Salary>=4500 
+{
+   acknowledged: true,
+  insertedId: null,
+  matchedCount: 6,
+  modifiedCount: 6,
+  upsertedCount: 0
+}
+##  Use of Updatemany to Update Multiple Fields 
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
